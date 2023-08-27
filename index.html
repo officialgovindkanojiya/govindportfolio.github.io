@@ -13,7 +13,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+
+     /* Media queries for responsiveness */
+
+     @media (max-width: 991px) {
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+                margin: 80px 0;
+            }
+            .firstSection > div {
+                width: 80%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .rightSection img {
+                width: 100%;
+                max-width: 300px;
+            }
+            .secondSection {
+                padding: 0 20px;
+            }
+            .vertical-title, .vertical-desc {
+                width: auto;
+                text-align: center;
+            }
+            .footer-dark .item:not(.social) {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .footer-dark .item.social {
+                margin-top: 10px;
+            }
+        }
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -74,10 +121,7 @@
             /* margin: 70px 0; */
             
         }
-        .rightSection{
-          
-            
-        }
+        
         .rightSection img{
             width: 80%;
             margin: 50px 0;
@@ -229,6 +273,53 @@
   margin-bottom:0;
 }
     
+
+
+/* Existing styles... */
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .firstSection {
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+  }
+  
+  .firstSection > div {
+    width: 80%;
+    text-align: center;
+  }
+  
+  .rightSection img {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .secondSection {
+    max-width: 90vw;
+    padding: 20px;
+  }
+  
+  .secondSection .box {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .vertical-title,
+  .vertical-desc {
+    width: auto;
+    text-align: center;
+    position: static;
+    top: 0;
+    margin: 10px 0;
+  }
+  
+  .footer-dark .item {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
     </style>
 </head>
 
@@ -330,35 +421,46 @@
         </section>
     </main>
 
-    <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-                    </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
+    <footer class="footer-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 item">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web design</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Hosting</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 item">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 item text">
+                <h3>Company Name</h3>
+                <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 item social">
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 item text-center">
                 <p class="copyright">Company Name © 2018</p>
             </div>
-        </footer>
+        </div>
+    </div>
+</footer>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
